@@ -1,0 +1,31 @@
+.navbar {
+    margin-bottom: 20px;
+  }
+
+.container
+{
+    color:#010301;
+    background-color: #cfe1c4;
+}
+
+body
+{
+    padding-top: 66px;
+    background-color: #075735;
+}
+
+/*
+.row > div 
+{
+    text-align: center;
+    background: ;
+}
+*/
+
+footer
+{
+    padding: 10px 0;
+    background-color: #343a40;
+    color: #e4ffff;
+    
+}

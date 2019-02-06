@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nunca va a funcionar lo encontré sin utilidad</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista de ejemplares registrados</h1>
+
+        <!--Agrupar controles en secciones y darle espaciado automatico campo y etiquetsa-->
+        <div class="form-group">
+
+            <p>
+                <!-- Parrafo usado para las etiquetas de campo buscar nombre -->
+                <label for="listaCaballos">Buscar por nombre:
+                </label>
+                <input class="form-control" type="text" id="listaCaballos" placeholder="" list="caballos" />
+                <datalist id="caballos">
+                                @foreach($consListaCaballos as $caballo)
+                                    <option value="{{ $caballo->Nombre}}">
+                                @endforeach
+                            </datalist>
+
+            </p>
+            <!-- Fin parrafo usado para las etiqutas de campo buscar por nombre -->
+        </div>
+        <!-- Fin div para agrupación de campo busqueda -->
+
+
+
+        <!-- Por acá debe de mostrar una lista desplegable de los caballos -->
+        <div class="form-group">
+            <p>
+                <label for="listaCaballos">Caballos en el sistema:</label>
+
+                <select class="form-control" name="listaCaballos">
+                            <option selected>Elige un caballo</option>
+
+                            @foreach($consListaCaballos as $caballo)
+                                <option>{{ $caballo->Nombre}}</option>
+                            @endforeach
+                        </select>
+            </p>
+        </div>
+        <!-- Fin del div.formgrup para lista deplegable -->
+
+
+
+
+
+
+        <h2>Informaci&oacute;n detallada</h2>
+        <div class="form-group">
+            <label for="">Imagen</label>
+        </div>
+
+        <div class="form-group">
+            <label for="">Nombre</label>
+        </div>
+
+        <div class="form-group">
+            <label for="">Raza</label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Edad</label>
+        </div>
+
+
+        <div class="form-group">
+            <label for="">Puntuaje</label>
+        </div>
+
+    </div>
+</body>
+
+</html>
